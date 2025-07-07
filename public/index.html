@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Price Comparison</title>
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      padding: 12px;
+      margin: 12px;
+      border-radius: 8px;
+      max-width: 300px;
+      background-color: #fff;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    #results {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <h2>Compare Product Prices</h2>
+  
+  <input type="text" id="searchInput" placeholder="Enter model (e.g., iPhone 14)">
+  <button onclick="searchProduct()">Search</button>
+  <button onclick="sortBy('price')">Sort by Price</button>
+  <button onclick="sortBy('rating')">Sort by Rating</button>
+
+  <div id="results" class="results-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
+
+
