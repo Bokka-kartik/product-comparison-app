@@ -1,7 +1,7 @@
 async function searchProduct() {
   const query = document.getElementById("searchInput").value.toLowerCase().trim();
   const resultsBox = document.getElementById("results");
-  resultsBox.innerHTML = "🔄 Loading...";
+  resultsBox.innerHTML = " Loading...";
 
   try {
     const response = await fetch(`http://localhost:3000/scrape?q=${query}`);
@@ -13,7 +13,7 @@ async function searchProduct() {
       displayResults(products);
     }
   } catch (err) {
-    console.error("❌ Error fetching product data:", err);
+    console.error(" Error fetching product data gone wrong:", err);
     resultsBox.innerHTML = "<p style='color:red;'>Failed to fetch product data.</p>";
   }
 }
